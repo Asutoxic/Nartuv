@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kiểm Tra Năm Nhuận</title>
+</head>
+
+<body>
+    <script>
+        let Year = Number(prompt('Nhập vào một năm'))
+        // Cách 1: If...Else
+        // if (Year % 4 == 0) {
+        //     if (Year % 100 == 0) {
+        //         if (Year % 400 == 0) {
+        //             document.write(`Năm ${Year} là năm nhuận`);
+        //         } else {
+        //             document.write(`Năm ${Year} không phải là năm nhuận`);
+        //         }
+        //     } else document.write(`Năm ${Year} là năm nhuận`);
+        // } else document.write(`Năm ${Year} không phải là năm nhuận`);
+        // Cách 2: Switch Case
+        // switch (Year) {
+        //     case (Year % 4 == 0 && Year % 100 == 0 && Year % 400 == 0):
+        //         document.write(`Năm ${Year} là năm nhuận`);
+        //         break;
+        //     case (Year % 4 == 0 && Year % 100 == 0 && Year % 400 != 0):
+        //         document.write(`Năm ${Year} không phải là năm nhuận`);
+        //         break;
+        //     case (Year % 4 == 0 && Year % 100 != 0):
+        //         document.write(`Năm ${Year} là năm nhuận`);
+        //         break
+        //     default: document.write(`Năm ${Year} không phải là năm nhuận`);
+        //         break;
+        // }
+        // Cách 3: Toán tử 3 ngôi
+        document.write((Year%4==0 && Year%100!=0) ==true ? (`Năm ${Year} là năm nhuận`) : (Year%4==100 && Year%400!=0)== true? (`Năm ${Year} không phải là năm nhuận`) : (Year%100==0 && Year%400==0)==true ? (`Năm ${Year} là năm nhuận`) : (`Năm ${Year} không phải là năm nhuận`))
+    </script>
+</body>
+
+</html>
