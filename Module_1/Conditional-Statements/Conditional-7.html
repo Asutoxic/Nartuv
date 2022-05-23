@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Câu lệnh switch-case</title>
+</head>
+
+<body>
+    <h1>Kiểm tra số ngày trong tháng</h1>
+    <input type="number" min="1" max="12" id="month">
+    <button onclick="check()">Kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function check() {
+            let month = Number(document.getElementById("month").value);
+            let result = "";
+            // if (month==1 || month==3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12) {
+            //     result = "31"
+            // } else if (month == 4 || month == 6 || month == 9 || month == 11) {
+            //     result = "30"
+            // } else result = "28 hoặc 29"
+            // switch (month) {
+            //     case 1:
+            //     case 3:
+            //     case 5:
+            //     case 7:
+            //     case 8:
+            //     case 10:
+            //     case 12:
+            //         result = "31"
+            //         break;
+            //     case 4:
+            //     case 6:
+            //     case 9:
+            //     case 11:
+            //         result = "30"
+            //         break;
+            //     default:
+            //         result = "28 hoặc 29"
+            // } 
+            result = ((month==1 || month==3 || month == 5 || month == 7 || month == 8 || month == 10 || month == 12)== true ? "31" : (month == 4 || month == 6 || month == 9 || month == 11) ? "30" : "28 hoặc 29")
+            document.getElementById("result").innerHTML = `Tháng này có ${result} ngày`
+        }  
+    </script>
+</body>
+
+</html>
