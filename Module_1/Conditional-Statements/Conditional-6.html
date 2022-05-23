@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tính chỉ số cân nặng của cơ thể</title>
+</head>
+<body>
+    <h1>Tính chỉ số cân nặng của cơ thể</h1>
+    <p>Nhập số cân nặng (kg):</p>
+    <input type="text" id="weight">
+    <p>Nhập chiều cao (m):</p>
+    <input type="text" id="height"> <br><br>
+    <button onclick="kiemtra()">Kiểm Tra</button>
+    <p id="result"></p>
+    <script>
+    function kiemtra() {
+    let weight = document.getElementById("weight").value;
+    let height = document.getElementById("height").value;
+    let BMI = weight / (height**2);
+    let result = "";
+    if (BMI < 18.5) {
+        result = "Thiếu cân"
+    } else if (BMI <25 && BMI >= 18.5) {
+        result = "Bình thường"
+    } else if (BMI <30 && BMI >=25) {
+        result = "Thừa cân"
+    } else result ="Béo phì"
+    document.getElementById("result").innerHTML = `Chỉ số BMI là ${BMI}, Cơ thể ${result}`}
+    </script>
+</body>
+</html>
