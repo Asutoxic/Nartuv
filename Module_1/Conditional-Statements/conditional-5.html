@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập với toán tử ba ngôi</title>
+</head>
+
+<body>
+    <script>
+        // Bài 1:
+        // Cách 1: If else
+        // let number1 = Number(prompt('Nhập vào số a'))
+        // let number2 = Number(prompt('Nhập vào số b'))
+        // let result = number1 + number2
+        // if (result < 4) {
+        //     document.write('Below');
+        // } else {
+        //     document.write('Over');
+        // }
+        // Cách 2: switch case
+        // switch (true) {
+        //     case (result < 4 == true): {
+        //         document.write('Below');
+        //         break;
+        //     }
+        //     default: document.write('Over');
+        // }
+        // Cách 3: Toán tử 3 ngôi 
+        // document.write((result<4) == true ? 'Below' : 'Over')
+        // Bài 2:
+        // Cách 1: If else
+        let message = prompt('Nhập vào chuỗi')
+        // if (message == 'Employee') {
+        //     alert('Hello');
+        // } else if (message == 'Director') {
+        //     alert('Greetings');
+        // } else if (message == '') {
+        //     alert('No login');
+        // } else alert('');
+        // Cách 2: switch case
+        // switch (message) {
+        //     case ('Employee'): alert('Hello');
+        //         break;
+        //     case ('Director'): alert('Director')
+        //         break;
+        //     case (''): alert('No login');
+        //         break;
+        //     default: alert('');
+        // }
+        // Cách 3: Toán tử 3 ngôi
+        alert((message == 'Employee')==true ? 'Hello' : (message == 'Director') == true ? 'Greetings' : (message == '') == true ? 'No login' : '')
+    </script>
+</body>
+
+</html>
