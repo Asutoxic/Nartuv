@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Luyện tập với cấu trúc if ... else ... if</title>
+</head>
+
+<body>
+    <script>
+        // Cách 1: If...Else
+        // let username = prompt('Nhập tên đăng nhập');
+        // if (username == 'Admin') {
+        //     let password = prompt('Nhập mật khẩu');
+        //     if (password == 'TheMaster') {
+        //         alert('Welcome!');
+        //     } else if (password == null) {
+        //         alert('Canceled');
+        //     } else { alert('Wrong Password'); }
+        // } else if (username == null) {
+        //     alert('Canceled')
+        // } else { alert("I don't know you") }
+        // Cách 2: Toán tử 3 ngôi
+        // let username = prompt ('Nhập tên đăng nhập')
+        // let password
+        // alert((username=='Admin') == true ? ((password= prompt('Nhập mật khẩu')) && (password=='TheMaster')== true ? 'Welcome' : (password==null) == true ? 'Canceled' : 'Wrong Password' ) : (username==null) == true ? 'Canceled' : "I don't know you")
+        // Cách 3: Switch Case
+        let username = prompt ('Nhập tên đăng nhập')
+        switch (true) {
+            case (username=='Admin'):
+                let password = prompt ('Nhập mật khẩu')
+                switch (true) {
+                    case (password=='TheMaster'):
+                        alert('Welcome')
+                        break;
+                    case (password==null) :
+                        alert('Canceled')
+                        break;
+                    default: alert ("Wrong Password")
+                        break;
+                }
+                break;
+            case (username==null):
+                alert('Canceled')
+                break
+            default: alert("I don't know you")
+                break;
+        }
+    </script>
+</body>
+
+</html>
